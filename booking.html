@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking | Razor & Rebellion</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="site-header">
+    <div class="logo">Razor & Rebellion</div>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="booking.html" class="active">Booking</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="booking-page">
+    <section class="booking-form-section">
+      <h1>Book Your Appointment</h1>
+      <form id="booking-form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="service">Select Service:</label>
+        <select id="service" name="service" required>
+          <option value="">-- Choose a Service --</option>
+          <option value="Classic Cut">Classic Cut</option>
+          <option value="Beard Trim">Beard Trim</option>
+          <option value="Hot Towel Shave">Hot Towel Shave</option>
+          <option value="Fade & Taper">Fade & Taper</option>
+          <option value="Kids' Cut">Kids' Cut</option>
+        </select>
+
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Preferred Time:</label>
+        <input type="time" id="time" name="time" required>
+
+        <button type="submit" class="btn">Confirm Booking</button>
+      </form>
+
+      <div class="confirmation-message" style="display: none;">
+        <p>Thank you for your booking! ✂️ We'll contact you to confirm your appointment soon.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script>
+    const bookingForm = document.querySelector('#booking-form');
+    const confirmationMessage = document.querySelector('.confirmation-message');
+
+    bookingForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      bookingForm.style.display = 'none';
+      confirmationMessage.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
