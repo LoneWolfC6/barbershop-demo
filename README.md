@@ -61,4 +61,4 @@ It can easily serve as a template for small business websites—especially servi
 
 ## Contact:
 Built by Brandon Jamison  
-Feel free to reach out if you'd like a custom website for your business or project.
+For project inquiries or collaborations, feel free to [email me](brandonjamison.dev@gmail.com).
