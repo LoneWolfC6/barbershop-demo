@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Booking | Razor & Rebellion</title>
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- Navigation -->
+
+  <!-- Header & Navigation -->
   <header class="site-header">
     <div class="logo">Razor & Rebellion</div>
     <nav class="site-nav">
@@ -22,12 +23,13 @@
     </nav>
   </header>
 
+  <!-- Booking Form Section -->
   <main class="booking-page">
     <section class="booking-form-section">
       <h1>Book Your Appointment</h1>
       <form id="booking-form">
         <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" required />
 
         <label for="service">Select Service:</label>
         <select id="service" name="service" required>
@@ -40,10 +42,10 @@
         </select>
 
         <label for="date">Preferred Date:</label>
-        <input type="date" id="date" name="date" required>
+        <input type="date" id="date" name="date" required />
 
         <label for="time">Preferred Time:</label>
-        <input type="time" id="time" name="time" required>
+        <input type="time" id="time" name="time" required />
 
         <button type="submit" class="btn">Confirm Booking</button>
       </form>
@@ -54,16 +56,7 @@
     </section>
   </main>
 
-  <script src="js/main.js"></script>
-  <script>
-    const bookingForm = document.querySelector('#booking-form');
-    const confirmationMessage = document.querySelector('.confirmation-message');
-
-    bookingForm.addEventListener('submit', function(event) {
-      event.preventDefault();
-      bookingForm.style.display = 'none';
-      confirmationMessage.style.display = 'block';
-    });
-  </script>
+  <!-- JavaScript -->
+  <script src="js/main.js" defer></script>
 </body>
 </html>
